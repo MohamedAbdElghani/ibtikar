@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1141px" viewBox="0 0 1440 1141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Combined Shape</title>
+    <defs>
+        <linearGradient x1="36.8125647%" y1="14.9985454%" x2="43.2324017%" y2="71.4348081%" id="linearGradient-1">
+            <stop stop-color="#EFFAFD" offset="0%"></stop>
+            <stop stop-color="#F5FDFE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="login" fill="url(#linearGradient-1)">
+            <g id="header" transform="translate(-4.000000, -11.000000)">
+                <path d="M0,1231 L0,2 L507,2 L507,0 L1444.7298,0 C1473.62484,198.057228 1355.87752,257.398074 1091.48783,178.022538 C694.9033,58.9592327 677.188723,527.449306 668.516686,718.938194 C659.958473,907.913711 814.511367,1198.87875 519.029959,1229.90101 L519,1231 L0,1231 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

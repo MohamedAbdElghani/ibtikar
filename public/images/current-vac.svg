@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="709px" height="695px" viewBox="0 0 709 695" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path 5</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="709" height="695"></rect>
+        <linearGradient x1="13.1731593%" y1="42.4431086%" x2="70.7814554%" y2="65.4300578%" id="linearGradient-3">
+            <stop stop-color="#F3FBFD" offset="0%"></stop>
+            <stop stop-color="#F7FFFD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hiring" transform="translate(-731.000000, -1931.000000)">
+            <g id="Path-5" transform="translate(731.000000, 1931.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <path d="M1065.01231,79.1095779 C977.70201,6.39667015 646.008227,-83.0940336 613.50791,151.674351 C581.007593,386.442737 253.504401,209.881389 143.003324,225.791313 C69.3359397,236.397928 32.6681649,326.166115 33,495.095874 C48.8051864,587.599884 112.139888,644.254734 223.004104,665.060423 C389.300429,696.268958 419.44819,660.441868 638.508154,624.703544 C857.568117,588.96522 935.688961,693.125229 1065.01231,527.691815 C1194.33566,362.2584 1152.32261,151.822486 1065.01231,79.1095779 Z" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

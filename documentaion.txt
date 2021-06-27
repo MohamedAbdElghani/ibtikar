@@ -1,0 +1,247 @@
+Register endpoint
+---------------------
+URL: /talent/{lang}/register
+METHOD: POST
+request data
+name -> string|required
+email -> email|required
+password -> string|required
+confirm_password -> sting|required
+====================================================================================================================================================================
+====================================================================================================================================================================
+Login endpoint
+------------------------
+URL: /talent/{lang}/login
+METHOD: POST
+request data
+email -> email|required
+password -> string|required
+====================================================================================================================================================================
+====================================================================================================================================================================
+Complete profile endpoint
+----------------------------
+URL: /talent/{lang}/profile/complete
+METHOD: GET
+-----------------------------------------
+URL: /talent/{lang}/profile/complete
+METHOD: POST
+request data
+name -> string|required
+country -> string|required
+phone -> string|required
+birthdate -> string|required
+describe_yourself -> string|required
+-----------------------------------------
+URL: /talent/{lang}/profile/complete-img
+METHOD: POST
+request data
+file -> image
+====================================================================================================================================================================
+====================================================================================================================================================================
+Primary role endpoint
+------------------------
+URL: /talent/{lang}/resume/build/primary-role
+METHOD: GET
+-----------------------------------------------
+URL: /talent/{lang}/resume/build/primary-role
+METHOD: POST
+request data
+speciality -> integer|required
+other_role -> string|(required if other role selected)
+====================================================================================================================================================================
+====================================================================================================================================================================
+Skill endpoint
+-----------------
+URL: /talent/{lang}/resume/build/skills
+METHOD: GET
+-----------------------------------------------
+URL: /talent/{lang}/resume/build/skills
+METHOD: POST
+request data
+employee_skill_id -> array|required
+top_skills -> string|nullable
+ex: into body
+{
+ "employee_skill_id" : [
+  1,7,15,22
+ ]
+}
+====================================================================================================================================================================
+====================================================================================================================================================================
+Primary role experience endpoint
+-----------------------------------
+URL: /talent/{lang}/resume/build/primary-role-experience
+METHOD: GET
+------------------------------------------------------
+URL: /talent/{lang}/resume/build/primary-role-experience
+METHOD: POST
+request data
+how_long -> integer|required
+====================================================================================================================================================================
+====================================================================================================================================================================
+Work history endpoint
+------------------------
+All work histories
+URL: /talent/{lang}/resume/build/work-history
+METHOD: GET
+------------------------------------------------------
+Create work history
+URL: /talent/{lang}/resume/build/work-history/create
+METHOD: GET
+------------------------------------------------------------------
+Save work history
+URL: /talent/{lang}/resume/build/work-history
+METHOD: POST
+request data
+title -> string|required
+company -> string|required
+currently_work_here -> nullable|boolean
+started_year -> string|nullable
+ended_year -> string|required
+accomplishment -> string|required
+------------------------------------------------------------------
+Edit work history
+URL: /talent/{lang}/resume/build/work-history/{work_id}/edit
+METHOD: GET
+------------------------------------------------------------------
+Update work history
+URL: /talent/{lang}/resume/build/work-history/{work_id}/update
+METHOD: POST
+request data
+title -> string|required
+company -> string|required
+currently_work_here -> nullable|boolean
+started_year -> string|nullable
+ended_year -> string|required
+accomplishment -> string|required
+------------------------------------------------------------------
+Delete work history
+URL: /talent/{lang}/resume/build/work-history/{work_id}/delete
+METHOD: DELETE
+====================================================================================================================================================================
+====================================================================================================================================================================
+Education endpoint
+------------------------
+All educations
+URL: /talent/{lang}/resume/build/education
+METHOD: GET
+------------------------------------------------------
+Create education
+URL: /talent/{lang}/resume/build/education/create
+METHOD: GET
+------------------------------------------------------------------
+Save education
+URL: /talent/{lang}/resume/build/education
+METHOD: POST
+request data
+school -> string|required
+degree -> string|required
+field_study -> string|required
+start_date -> string|required
+ended_year -> string|required
+end_date -> string|required
+------------------------------------------------------------------
+Edit education
+URL: /talent/{lang}/resume/build/education/{education_id}/edit
+METHOD: GET
+------------------------------------------------------------------
+Update education
+URL: /talent/{lang}/resume/build/education/{education_id}/update
+METHOD: POST
+request data
+school -> string|required
+degree -> string|required
+field_study -> string|required
+start_date -> string|required
+ended_year -> string|required
+end_date -> string|required
+------------------------------------------------------------------
+Delete education
+URL: /talent/{lang}/resume/build/education/{education_id}/delete
+METHOD: DELETE
+====================================================================================================================================================================
+====================================================================================================================================================================
+Certification endpoint
+------------------------
+All certifications
+URL: /talent/{lang}/resume/build/certification
+METHOD: GET
+------------------------------------------------------
+Create certification
+URL: /talent/{lang}/resume/build/certification/create
+METHOD: GET
+------------------------------------------------------------------
+Save certification
+URL: /talent/{lang}/resume/build/certification
+METHOD: POST
+request data
+name -> string|required
+issuing_organization -> string|required
+issue_date -> string|required
+expiration_date -> string|nullable
+credential_id -> string|nullable
+credential_url -> string|nullable
+-------------------------------------------------------------------------
+Edit certification
+URL: /talent/{lang}/resume/build/certification/{certification_id}/edit
+METHOD: GET
+-------------------------------------------------------------------------
+Update certification
+URL: /talent/{lang}/resume/build/certification/{certification_id}/update
+METHOD: POST
+request data
+name -> string|required
+issuing_organization -> string|required
+issue_date -> string|required
+expiration_date -> string|nullable
+credential_id -> string|nullable
+credential_url -> string|nullable
+------------------------------------------------------------------------
+Delete certification
+URL: /talent/{lang}/resume/build/certification/{certification_id}/delete
+METHOD: DELETE
+====================================================================================================================================================================
+====================================================================================================================================================================
+Job search status endpoint
+----------------------------
+URL: /talent/{lang}/resume/build/job-search-status
+METHOD: GET
+-----------------------------------------
+URL: /talent/{lang}/resume/build/job-search-status
+METHOD: POST
+request data
+job_search -> string|required
+====================================================================================================================================================================
+====================================================================================================================================================================
+Preferred salary
+---------------------
+URL: /talent/{lang}/resume/build/preferred-salary
+METHOD: GET
+-----------------------------------------
+URL: /talent/{lang}/resume/build/preferred-salary
+METHOD: POST
+request data
+min_base_salary -> integer|required
+====================================================================================================================================================================
+====================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

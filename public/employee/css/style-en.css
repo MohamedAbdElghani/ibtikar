@@ -1,0 +1,263 @@
+body{
+direction: ltr;
+}
+
+.navbar-nav .nav-item+.nav-item {
+    margin-left: 1rem;
+    margin-right: inherit;
+}
+.navbar-dark .navbar-nav .nav-item a:after, .navbar-dark .navbar-nav .active a:after{
+    right: auto;
+    left: 0px;
+}
+
+.item-text{
+    text-align: left;
+}
+
+.intro-carousel.owl-theme .owl-nav.disabled+.owl-dots{
+    text-align: right;
+    right: 0px;
+    left: auto;
+}
+.round-wrap{
+    right: 100px;
+    left: auto;
+}
+.blue-square{
+    right: 30px;
+    left: auto;
+}
+.green-square{
+    right: 0px;
+    left: auto;
+}
+
+.large-image-wrapper{
+    right: 0px;
+    left: auto;
+    }
+
+@media (min-width: 1500px){
+        .large-image-wrapper{
+        right: 100px;
+        left: auto;
+        }
+ }
+        
+ .right-blue-square {
+    left: -80px;
+    right: auto;
+}
+.right-green-square {
+    left: -120px;
+    right: auto;
+}
+
+figure.snip1087 h3{
+    right: auto;
+    left: 50px;
+    -webkit-transform: translate(-10px, 0);
+    transform: translate(-10px, 0);
+}
+figure.snip1087 h6 {
+    right: auto;
+    left: 50px;
+    -webkit-transform: translate(-30px, 0);
+    transform: translate(-30px, 0);
+}
+
+
+figure.snip1087 .icons {
+    left: 0;
+    right: auto;
+    }
+    figure.snip1087 .icons i {
+    left: auto;
+    right: 0;
+    }
+    figure.snip1087 .corner {
+    left: 0px;
+    right: auto;
+    }
+
+figure.snip1087 .icons i{
+ -webkit-transform: translate(-35px, -35px);
+transform: translate(-35px, -35px);
+}
+
+.article-text {
+    padding-right: 0em;
+    padding-left: 2em;
+}
+.blogs-section .col-md-6:nth-child(2){
+    border-left: 1px solid rgba(0,0,0,.1);
+    border-right: 0px;
+}
+.productImgBox {
+    left: -100px;
+    right: auto;
+}
+.productBlueIcon {
+    right: 60px;
+    left: auto;
+}
+.productPinkIcon {
+    right: 50px;
+    left: auto;
+}
+.productImg img{
+    transform: scaleX(-1)
+}
+.footerList {
+    padding-left: 1em;
+    padding-right: 0;
+}
+.socialIcons {
+    text-align: right;
+}
+
+.slick-slide {
+    float: left;
+}
+
+.teamInfo {
+    left: 50%;
+    margin-left: -10em;
+    right: auto;
+    margin-right: 0px
+}
+
+.blogShareBox {
+    left: 15px;
+    right: auto
+}
+.blogInnerText {
+    padding-left: 140px;
+    padding-right: 0px;
+}
+
+.atail-comment-body {
+    padding-left: 65px;
+    padding-right: 0
+}
+
+@media (min-width: 768px){
+    .atail-comment-body {
+        padding-left: 95px;
+        padding-right: 0
+    }
+}
+
+.atail-comment-avatar{
+    right: auto;
+    left: 0px
+}
+
+.blog-count-likes svg, .blog-count-comments svg {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+.atail-comment-body .blog-count-comments, .atail-comment-body .comment-reply-link, .atail-comment-body .comment-edit-link {
+    margin-left: 12px;
+    margin-right: 0px;
+}
+
+
+.blogs-person{
+    right: 10px;
+    left: auto;
+}
+
+.hintBox {
+    background: url(../images/dots.png) #fff repeat-y center left;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav .nav-item+.nav-item {
+        margin-left: 0;
+    }
+
+}
+
+.projectList li svg {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.rightSideMenu {
+    border-right: none;
+    border-left: 4px solid #4DC8F2;
+}
+.rightSideMenu li.active{
+    background: #4DC8F2;
+    border-radius: 0px 50px 50px 0px;
+}
+.rightSideMenu li.active a{
+    color:#fff;
+}
+.whiteprogressBar small{
+    right: 0;
+    left:auto;
+}
+.teamNumbers{
+    margin-left: auto;
+    margin-right: 0px;
+}
+.taskBar small{
+    right: 10px;
+    left:auto;  
+}
+.taskBar span,.whiteprogressBar span {
+    right: auto;
+    left:0px   
+}
+.releasefeatures input[type=checkbox] + label:before{
+    margin-right: 10px;
+    margin-left: 0;
+}
+.unselectedItems ul li{
+    margin-right: 5px;
+    margin-left: 0px;
+}
+.innerDashboard .blogs-articles .col-md-6:nth-child(1) {
+    border-right: 1px solid rgba(0,0,0,.1);
+    border-left: none
+}
+@media only screen and (max-width:767px) {
+
+    .innerDashboard .blogs-articles .col-md-6:nth-child(1){
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+}
+#msform fieldset{
+    text-align: left;
+}
+#progressbar li{
+    float: left;
+}
+
+#progressbar li:after {
+right: 0px;
+    left: -50%;
+}
+#msform .action-button{
+    right: right;
+    left: 0px;
+}
+#msform .action-button.next {
+    left: auto;
+    right: 25%;
+    margin-right: 20px;
+}
+
+.selectedItems ul li svg {
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+.checkListUl li svg {
+    margin-left: 0px;
+    margin-right: 10px;
+}

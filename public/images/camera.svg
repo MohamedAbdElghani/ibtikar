@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="14px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>camera</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="profile-step1" transform="translate(-548.000000, -370.000000)" stroke="#FFFFFF" stroke-width="1.8">
+            <g id="Group" transform="translate(430.000000, 209.000000)">
+                <g id="user-(1)" transform="translate(42.000000, 152.000000)">
+                    <g id="Group-3" transform="translate(65.000000, 1.000000)">
+                        <g id="camera" transform="translate(12.000000, 9.000000)">
+                            <path d="M15,10.6666667 C15,11.4030463 14.3894792,12 13.6363636,12 L1.36363636,12 C0.610520796,12 0,11.4030463 0,10.6666667 L0,3.33333333 C0,2.59695367 0.610520796,2 1.36363636,2 L4.09090909,2 L5.45454545,0 L9.54545455,0 L10.9090909,2 L13.6363636,2 C14.3894792,2 15,2.59695367 15,3.33333333 L15,10.6666667 Z" id="Path"></path>
+                            <circle id="Oval" cx="7.125" cy="6.375" r="2.625"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1345px" height="394px" viewBox="0 0 1345 394" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(13.000000, 23.000000)" stroke-width="2">
+            <polygon id="Path-6" stroke="#78D0BA" stroke-linejoin="round" points="0 36 10.9690722 0 38 25.4347826"></polygon>
+            <polygon id="Path-6-Copy" stroke="#78D0BA" stroke-linejoin="round" transform="translate(1170.000000, 122.500000) rotate(45.000000) translate(-1170.000000, -122.500000) " points="1158 134 1164.92784 111 1182 127.25"></polygon>
+            <path d="M509.699666,8.89479796 C509.17413,9.1579203 508.679664,9.4739125 508.223239,9.83580085 C506.259536,11.3927735 505,13.7992965 505,16.5 C505,21.1944204 508.80558,25 513.5,25 L513.5,25 C518.19442,25 522,21.1944204 522,16.5 C522,11.8055796 518.19442,8 513.5,8" id="Path" stroke="#EA688A"></path>
+            <path d="M328.75,117.75 L320,106 L328.75,117.75 L337.5,106 L328.75,117.75 Z M328.75,117.75 L337.5,129.5 L328.75,117.75 L320,129.5 L328.75,117.75 Z" id="Combined-Shape" stroke="#F9DD9C" stroke-linecap="round" transform="translate(328.750000, 117.750000) rotate(-29.000000) translate(-328.750000, -117.750000) "></path>
+            <path d="M1199.75,337.75 L1191,326 L1199.75,337.75 L1208.5,326 L1199.75,337.75 Z M1199.75,337.75 L1208.5,349.5 L1199.75,337.75 L1191,349.5 L1199.75,337.75 Z" id="Combined-Shape" stroke="#F9DD9C" stroke-linecap="round" transform="translate(1199.750000, 337.750000) rotate(-29.000000) translate(-1199.750000, -337.750000) "></path>
+            <rect id="Rectangle" stroke="#4DC8F2" transform="translate(126.045044, 206.967979) rotate(48.000000) translate(-126.045044, -206.967979) " x="117.545044" y="198.967979" width="17" height="16"></rect>
+            <rect id="Rectangle-Copy" stroke="#F9DC98" transform="translate(867.186326, 49.428398) rotate(48.000000) translate(-867.186326, -49.428398) " x="849.686326" y="32.9283976" width="35" height="33"></rect>
+        </g>
+        <polygon id="Path-6-Copy" stroke="#78D0BA" stroke-width="2" stroke-linejoin="round" transform="translate(283.000000, 355.500000) rotate(27.000000) translate(-283.000000, -355.500000) " points="271 367 277.927835 344 295 360.25"></polygon>
+        <path d="M1311.18772,259.368515 C1310.38396,259.770937 1309.62772,260.254219 1308.92966,260.807695 C1305.92635,263.188948 1304,266.869512 1304,271 C1304,278.179702 1309.8203,284 1317,284 C1324.1797,284 1330,278.179702 1330,271 C1330,263.820298 1324.1797,258 1317,258" id="Path" stroke="#EA688A" stroke-width="2" transform="translate(1317.000000, 271.000000) scale(1, -1) translate(-1317.000000, -271.000000) "></path>
+    </g>
+</svg>

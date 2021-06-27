@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="11px" viewBox="0 0 15 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>check</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="team2" transform="translate(-987.000000, -312.000000)" stroke="#FFFFFF" stroke-width="1.6">
+            <g id="Group" transform="translate(545.000000, 236.000000)">
+                <g id="check" transform="translate(443.000000, 77.000000)">
+                    <polyline id="Path" points="12.8 0 4 8.8 0 4.8"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

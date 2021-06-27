@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="171px" height="52px" viewBox="0 0 171 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Google Play</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="portfolio-details" transform="translate(-810.000000, -1379.000000)">
+            <g id="Google-Play" transform="translate(810.000000, 1379.000000)">
+                <rect id="button" fill="#505A74" x="0" y="0" width="170.4" height="51.2" rx="8"></rect>
+                <text id="Download-on" font-family="Roboto-Regular, Roboto" font-size="12" font-weight="normal" letter-spacing="0.960000038" fill="#FFFFFF">
+                    <tspan x="55.1422933" y="17.4">Download on</tspan>
+                </text>
+                <text id="play" font-family="Roboto-Light, Roboto" font-size="19.2" font-weight="300" fill="#FFFFFF">
+                    <tspan x="116.8" y="40.4">play</tspan>
+                </text>
+                <text id="Google" font-family="Helvetica" font-size="18.2" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="55" y="40">Google</tspan>
+                </text>
+                <path d="M12.8,39.4109721 L12.8,11.7922446 C12.8,10.8284648 13.3587525,9.99537021 14.1695982,9.6 L30.1457127,25.596897 L14.163173,41.6 C13.3557994,41.2034276 12.8,40.3722663 12.8,39.4109721 Z M35.2141882,30.6717569 L17.7453251,40.7704634 L31.5225961,26.9753964 L35.2141882,30.6717569 Z M40.6441645,23.6653731 C41.2251944,24.1106845 41.6,24.8123626 41.6,25.6016084 C41.6,26.3789943 41.2365521,27.0712496 40.6704496,27.5173733 L36.9598738,29.6625361 L32.8993172,25.596897 L36.9571155,21.5338247 L40.6441645,23.6653731 Z M17.7555633,10.433517 L35.2114299,20.5246689 L31.5225961,24.2182351 L17.7555633,10.433517 Z" id="logo" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
