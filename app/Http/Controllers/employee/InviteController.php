@@ -27,8 +27,8 @@ class InviteController extends Controller
       'email'  => 'required|array',
       'email.*'  => 'required|email',
     ]);
-
-    foreach($data['email'] as $email){
+      $data['email']=array_unique($data['email']);
+      foreach($data['email'] as $email){
       $check_email_exist = \App\User::where('email', '=', $email)->first() ? true : false;
       if($check_email_exist){
         continue;
@@ -40,5 +40,5 @@ class InviteController extends Controller
     }
     return response()->json(['message' => 'Your invitations have been sent'], 200);
   }
-    
+
 }

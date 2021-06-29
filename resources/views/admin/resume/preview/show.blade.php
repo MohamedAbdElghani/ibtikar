@@ -11,14 +11,14 @@
           {{--  Mobile profile image  --}}
           <div class="col-12 user-uploadImg d-block d-lg-none">
             <div class="user-image">
-              <img src="{{ $user->feature_image ? url('/').'/storage/'.$user->feature_image : '/images/user-big.png' }}" 
+              <img src="{{ $user->feature_image ? url('/').'/storage/'.$user->feature_image : '/images/user-big.png' }}"
                   class="uploadUser" alt="user" />
               <span class="cameraIcon">
                 <img src="{{url('/')}}/images/camera.svg" alt="" />
               </span>
             </div>
           </div>
-        
+
           <div class="col-12 col-lg-7 profileRightSide">
             <div class="d-flex">
               <h1 class="h2 mb-0" id="name_text">{{ $user->name }}</h1>
@@ -33,7 +33,7 @@
               <i data-feather="clock"></i>
               Status <span class="lightText ml-2" id="job_search_text"> {{$resume->job_search}}</span>
             </h6>
-        
+
             {{--  Mobile video upload  --}}
             <div class="d-block d-lg-none">
               <div class="uploadVideo d-flex mt-4">
@@ -44,22 +44,23 @@
                 </div>
               </div><!-- video uploadVideo-->
             </div><!-- col-md-3 end-->
-        
+
           </div><!-- col-lg-8 col-md-6 end-->
-        
+
           <div class="col-lg-5 profileRightSide">
+              @if($exam_link)<h6>Exam Link : <a href="{{$exam_link}}">{{$exam_link}}</a></h6>@endif
               <div class="d-flex">
                   <h5 class="mb-4"> Skills</h5>
               </div>
-        
+
               <div class="selectedItems blueTags">
                   <ul id="selected_skills_list">
                       @foreach ($selected_skills as $skill)
                           <li>{{\App\EmployeeSkill::find($skill)->name}}</li>
                       @endforeach
-        
-                      @php 
-                          $explode_tec = explode(',', trim($resume->top_skills)); 
+
+                      @php
+                          $explode_tec = explode(',', trim($resume->top_skills));
                           $trim_tec = array();
                           foreach ($explode_tec as $tec) {
                               array_push($trim_tec, trim($tec));
@@ -72,9 +73,9 @@
                       @endforeach
                   </ul>
               </div>
-        
+
           </div><!-- col-lg-4 col-md-6 end-->
-        
+
         </div><!-- row end-->
 
         {{-- about --}}
@@ -86,7 +87,7 @@
             <p class="font-12 mt-4" id="describe_yourself_text">{{$user->describe_yourself}}</p>
           </div>
         </div>
-        
+
         {{-- experience --}}
         <div class="row">
 
@@ -94,49 +95,43 @@
               <div class="d-flex mb-4 align-items-center">
                 <h4 class="headingstyle"> Experience</h4>
               </div>
-        
+
               <ul class="jobsList">
                 @foreach ($work_histories as $work)
-                  @php
-                    $started_year = strtotime($work->started_year);
-                    $started_year = date('Y',$started_year);
-                    $ended_year = strtotime($work->ended_year);
-                    $ended_year = date('Y',$ended_year);
-                  @endphp
                   <li id="work_id_{{$work->id}}">
                     <div>
                       <h6 class="mb-0 company">{{$work->company}}</h6>
                       <span class="blueText work-title">{{$work->title}}</span>
-                      <p class="hintText mb-0"><span class="started_year">{{$started_year}}</span> - 
+                      <p class="hintText mb-0"><span class="started_year">{{$work->started_month.' '.$work->started_year}}</span> -
                         <span class="{{$work->currently_work_here ? 'h5' : ''}} ended_year">
-                          {{$work->currently_work_here ? 'Present' : $ended_year}}</span></p>
+                          {{$work->currently_work_here ? 'Present' : $work->ended_month.' '.$work->ended_year}}</span></p>
                       <p class="hintText accomplishment">{{$work->accomplishment}}</p>
                     </div>
                   </li>
                 @endforeach
               </ul>
-        
+
           </div><!-- step 6-->
-        
+
         </div><!-- row end -->
 
         {{-- education --}}
         <div class="row">
           <div class="col-md-12 profileRightSide">
-        
+
             <div class="d-flex mb-4 align-items-center">
               <h4 class="headingstyle"> Education</h4>
             </div>
-        
+
             <ul class="jobsList" id="education_list">
               @foreach ($educations as $education)
                 <li id="education_id_{{$education->id}}">
                   <div>
                     <h6 class="mb-0 school">{{$education->school}}</h6>
-                    <span class="education-degree">{{$education->degree}}</span>
+                    <span class="education-degree">{{$education->field_study}} , {{$education->degree}}</span>
                     <p class="hintText">
-                      <span class="start_date">{{$education->start_date}}</span> - 
-                      <span class="end_date">{{$education->end_date}}</span>
+                      <span class="start_date">{{$education->started_month.' '.$education->started_year}}</span> -
+                      <span class="end_date">{{$education->ended_month.' '.$education->ended_year}}</span>
                     </p>
                   </div>
                 </li>
@@ -148,11 +143,11 @@
         {{-- certificate --}}
         <div class="row">
           <div class="col-md-12 profileRightSide">
-        
+
             <div class="d-flex mb-4 align-items-center">
               <h4 class="headingstyle"> Certificates </h4>
             </div>
-        
+
             <ul class="jobsList" id="certificate_list">
               @if(!count($certifications))
               <li style="display: none">
@@ -162,30 +157,21 @@
                   <p class="hintText mb-0"> <span class="h5">Credential ID : </span> <span class="credential_id"></span></p>
                   <a class="hintText credential_url" href="" target="_blank"> See Credential </a>
                 </div>
-        
+
                 <a class="editLink ml-auto show-cert-form text-right">
                   <i class="lnir lnir-chevron-right"></i>
                 </a>
               </li>
               @endif
               @foreach ($certifications as $certificate)
-                @php
-                  $issue_date = strtotime($certificate->issue_date);
-                  $issue_date = date('M Y',$issue_date);
-                @endphp
-                @if($certificate->expiration_date)
-                  @php
-                    $expiration_date = strtotime($certificate->expiration_date);
-                    $expiration_date = date('M Y',$expiration_date);
-                  @endphp
-                @endif
                 <li id="certificate_id_{{$certificate->id}}">
                   <div class="mb-2">
-                    <h6 class="mb-0 certificate-name">{{$certificate->name}}</h6>
-                    <p class="hintText mb-0 issue_date"> Issued {{$issue_date}} 
-                      <span class="expiration_date">@if($certificate->expiration_date) - {{$expiration_date}} @endif</span></p>
+                    <h6 class="mb-0 certificate-name">{{$certificate->name}} - {{$certificate->issuing_organization}}</h6>
+                    <p class="hintText mb-0 issue_date"> Issued {{$certificate->issue_month.' '.$certificate->issue_year}}
+                      <span class="expiration_date">@if($certificate->expiration_month) - Expired {{$certificate->expiration_month.' '.$certificate->expiration_year}}@else - Not Expired @endif</span></p>
                     <p class="hintText mb-0"> <span class="h5">Credential ID : </span> <span class="credential_id">{{$certificate->credential_id}}</span></p>
-                    <a class="hintText credential_url" href="{{$certificate->credential_url}}" target="_blank"> See Credential </a>
+{{--                    <a class="hintText credential_url" href="{{$certificate->credential_url}}" target="_blank"> See Credential </a>--}}
+                    <p class="hintText credential_url" target="_blank"> {{$certificate->credential_url}} </p>
                   </div>
                 </li>
               @endforeach

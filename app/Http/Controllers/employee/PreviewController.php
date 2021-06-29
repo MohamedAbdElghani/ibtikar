@@ -51,6 +51,24 @@ public function apiPreviewResume(){
       return strtotime($education['issue_date']);
     })->values()->all();
 
+    $exam_links[EmployeeRole::where('name', 'iOS Developer')->first()->id]='https://ibtikar.coderbyte.com/sl-candidate?promo=ibtikartechnologies-ra3ha:ios-assessment-alu04q22ev';
+    $exam_links[EmployeeRole::where('name', 'Devops')->first()->id]='Devops url of exam';
+    $exam_links[EmployeeRole::where('name', 'Fullstack')->first()->id]='Fullstack url of exam';
+    $exam_links[EmployeeRole::where('name', 'Frontend Developer')->first()->id]='https://ibtikar.coderbyte.com/sl-candidate?promo=ibtikartechnologies-ra3ha:angular-assessment-qwotw11m1c';
+    $exam_links[EmployeeRole::where('name', 'Product Owner')->first()->id]='Product Owner url of exam';
+    $exam_links[EmployeeRole::where('name', 'Android Developer')->first()->id]='https://ibtikar.coderbyte.com/sl-candidate?promo=ibtikartechnologies-ra3ha:android-assessment-v2qoxol4yi';
+    $exam_links[EmployeeRole::where('name', 'Quality Control Tester')->first()->id]='Quality Control Tester url of exam';
+    $exam_links[EmployeeRole::where('name', 'Product Manager')->first()->id]='https://ibtikar.coderbyte.com/sl-candidate?promo=ibtikartechnologies-ra3ha:c-assessment-no38yk2cep';
+    $exam_links[EmployeeRole::where('name', 'Backend Developer')->first()->id]='https://ibtikar.coderbyte.com/sl-candidate?promo=ibtikartechnologies-ra3ha:backend-assessment-34jbuudzt9';
+    $exam_links[EmployeeRole::where('name', 'Scrum Master')->first()->id]='Scrum Master url of exam';
+    $exam_links[EmployeeRole::where('name', 'Chief Technology Office (CTO)')->first()->id]='Chief Technology Office (CTO) url of exam';
+    $exam_links[EmployeeRole::where('name', 'UI/UX Designer')->first()->id]='UI/UX Designer url of exam';
+
+    if($resume->job_search=='Ready to interview')
+        $exam_link=$exam_links[$current_role_id];
+    else
+        $exam_link='';
+
   return response()->json([
     'user'            => \App\User::find($user->id),
     'resume'          => CandidateResume::find($resume->id),
@@ -67,6 +85,7 @@ public function apiPreviewResume(){
     'work_histories'  => $work_histories,
     'educations'      => $educations,
     'certifications'  => $certifications,
+    'exam_link'  => $exam_link,
   ], 200);
 }
 
@@ -81,7 +100,7 @@ public function apiPreviewResume(){
 
 
 
-  
+
   ////////////////// previewResume \\\\\\\\\\\\\\\\\\
   // previewResume function
   public function previewResume(){
@@ -96,7 +115,7 @@ if($user->id == 234){
     if($resume->pipefy_id){
       // return redirect(route('employee_resume.thanks'));
     }
-    
+
     $job_roles        = EmployeeRole::where('name', '!=' , 'Other')->get();
     $current_role_id  = $resume->CandidateSpecialist()->where('current_role', true)->first()->speciality;
     $role             = EmployeeRole::find($current_role_id);
@@ -119,19 +138,19 @@ if($user->id == 234){
       })->values()->all();
 
     return view('employee.resume.preview.preview_resume', compact(
-      'user', 
-      'resume', 
-      'job_roles', 
-      'current_role_id', 
-      'current_role', 
-      'other_role', 
-      'experiences', 
-      'how_long_id', 
-      'how_long', 
-      'all_skills', 
-      'job_skills', 
-      'selected_skills', 
-      'work_histories', 
+      'user',
+      'resume',
+      'job_roles',
+      'current_role_id',
+      'current_role',
+      'other_role',
+      'experiences',
+      'how_long_id',
+      'how_long',
+      'all_skills',
+      'job_skills',
+      'selected_skills',
+      'work_histories',
       'educations',
       'certifications'
     ));
@@ -162,7 +181,7 @@ if($user->id == 234){
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($ch, CURLOPT_HEADER, FALSE);
 		curl_setopt($ch, CURLOPT_POST, TRUE);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, '{ 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, '{
       "query": "mutation{ createCard(input: {pipe_id: 301565221 fields_attributes: [{field_id: \"candidate_name_1\", field_value: \"'.$name.'\"} {field_id: \"candidate_email_1\", field_value: \"'.$email.'\"} {field_id: \"candidate_phone_number_1\", field_value: \"'.$phone.'\"} {field_id: \"current_role\", field_value: \"'.$current_role.'\"} {field_id: \"role_duration\", field_value: \"'.$how_long.'\"} {field_id: \"submission_date\", field_value: \"'.date("Y/m/d").'\"} {field_id: \"job_search_status_1\", field_value: \"'.$job_search.'\"} {field_id: \"talent_portal_profile_1\", field_value: \"'.$profile_url.'\"} ] parent_ids: [\"2735966\"] }) { card {id title }}}"
 		}');
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -212,24 +231,24 @@ if($user->id == 234){
       'birthdate'     => $user->birthdate,
       'github_url'    => $resume->github_url,
       'linkedin_url'  => $resume->linkedin_url,
-    ]); 
+    ]);
   }
 
 
   // ajaxDeleteVideo function
   public function ajaxDeleteVideo(){
     $this->authorize('create', CandidateResume::class);
-    
+
     $user = auth()->user();
     $resume = $user->CandidateResume;
     $old_video = $resume->camera_time;
-    
+
     $resume->update(['camera_time' => '']);
 
     if($old_video){
       Storage::delete('public/'.$old_video);
     }
-    return response()->json(['success' => 'Your video deleted successfully.']); 
+    return response()->json(['success' => 'Your video deleted successfully.']);
   }
 
 
@@ -244,7 +263,7 @@ if($user->id == 234){
     return response()->json([
       'success' => 'Your information updated successfully.',
       'describe_yourself'    => $data['describe_yourself']
-    ]); 
+    ]);
   }
 
 
@@ -304,7 +323,7 @@ if($user->id == 234){
       'min_base_salary'       => $resume->min_base_salary,
       'job_search'            => $resume->job_search,
       'job_skills'            => $job_skills,
-    ]); 
+    ]);
   }
 
 
@@ -332,7 +351,7 @@ if($user->id == 234){
     foreach($selected_skills as $skill){
       array_push($all_skills_arr, \App\EmployeeSkill::find($skill)->name);
     }
-    $explode_tec = explode(',', trim($resume->top_skills)); 
+    $explode_tec = explode(',', trim($resume->top_skills));
     foreach ($explode_tec as $tec) {
       array_push($all_skills_arr, trim($tec));
     }
@@ -340,7 +359,7 @@ if($user->id == 234){
     return response()->json([
       'success' => 'Your skills updated successfully.',
       'skills'  => $all_skills_arr
-    ]); 
+    ]);
   }
 
 
@@ -384,7 +403,7 @@ if($user->id == 234){
           'success' => 'Your information updated successfully.',
           'text'    => $data,
           'work_id' => $work->id
-        ]); 
+        ]);
       }else{
         return response()->json(['error' => 'invaild']);
       }
@@ -418,7 +437,7 @@ if($user->id == 234){
         'text'    => $data,
         'work_id' => $work->id,
         'new_work' => true
-        ]); 
+        ]);
     }
   }
 
@@ -432,7 +451,7 @@ if($user->id == 234){
 
     return response()->json(['success' => "work_id_".$data['delete_wxid']]);
   }
-  
+
 
 
   // ajaxUpdateEducation function
@@ -468,7 +487,7 @@ if($user->id == 234){
           'success'       => 'Your information updated successfully.',
           'text'          => $data,
           'education_id'  => $education->id
-        ]); 
+        ]);
       }else{
         return response()->json(['error' => 'invaild']);
       }
@@ -496,7 +515,7 @@ if($user->id == 234){
         'text'          => $data,
         'education_id'  => $education->id,
         'new_education' => true
-      ]); 
+      ]);
     }
   }
 
@@ -538,7 +557,7 @@ if($user->id == 234){
           'success'           => 'Your information updated successfully.',
           'text'              => $data,
           'certification_id'  => $certification->id
-        ]); 
+        ]);
       }else{
         return response()->json(['error' => 'invaild']);
       }
@@ -558,7 +577,7 @@ if($user->id == 234){
         'text'              => $data,
         'certification_id'  => $certification->id,
         'new_certification' => true
-      ]); 
+      ]);
     }
   }
 

@@ -19,7 +19,7 @@ class CandidateCertificationController extends Controller
   public function show(){
     $user           = auth()->user();
     $certifications = $user->CandidateCertification->sortByDesc(function ($education, $key) {
-      return strtotime($education['issue_date']);
+      return strtotime($education['issue_month'].' ' . $education['issue_year']);
     })->values()->all();
     if(count($certifications)){
       return view('employee.resume.build.certification.show', compact('certifications'));
@@ -30,7 +30,7 @@ class CandidateCertificationController extends Controller
 
 
   // create function
-  public function create(){  
+  public function create(){
     $user           = auth()->user();
     $certifications = $user->CandidateCertification;
     $cancel_btn     = count($certifications);
@@ -60,7 +60,7 @@ class CandidateCertificationController extends Controller
 
     $user       = auth()->user();
     $resume     =  $user->CandidateResume;
-    
+
     $data['candidate_resume_id'] = $resume->id;
 
     $user->CandidateCertification()->create($data);
@@ -70,7 +70,7 @@ class CandidateCertificationController extends Controller
 
 
   // edit function
-  public function edit(CandidateCertification $certification){  
+  public function edit(CandidateCertification $certification){
     return view('employee.resume.build.certification.edit', compact('certification'));
   }
 
@@ -123,7 +123,7 @@ class CandidateCertificationController extends Controller
 
 
   // apiCreate function
-  public function apiCreate(){  
+  public function apiCreate(){
     $user           = auth()->user();
     $certifications = $user->CandidateCertification;
     $cancel_btn     = count($certifications) > 0;
@@ -166,7 +166,7 @@ class CandidateCertificationController extends Controller
 
 
   // apiEdit function
-  public function apiEdit($lang, CandidateCertification $certification){  
+  public function apiEdit($lang, CandidateCertification $certification){
     return response()->json([
       'certification' => $certification,
     ], 200);
