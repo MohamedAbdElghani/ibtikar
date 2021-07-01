@@ -57,6 +57,7 @@ class PreviewCandidateResumeController extends Controller
     $exam_links[EmployeeRole::where('name', 'Scrum Master')->first()->id]='Scrum Master url of exam';
     $exam_links[EmployeeRole::where('name', 'Chief Technology Office (CTO)')->first()->id]='Chief Technology Office (CTO) url of exam';
     $exam_links[EmployeeRole::where('name', 'UI/UX Designer')->first()->id]='UI/UX Designer url of exam';
+    $exam_links[EmployeeRole::where('name', 'other')->first()->id]='other';
 
     if($resume->job_search=='Ready to interview')
         $exam_link=$exam_links[$current_role_id];

@@ -63,11 +63,20 @@ public function apiPreviewResume(){
     $exam_links[EmployeeRole::where('name', 'Scrum Master')->first()->id]='Scrum Master url of exam';
     $exam_links[EmployeeRole::where('name', 'Chief Technology Office (CTO)')->first()->id]='Chief Technology Office (CTO) url of exam';
     $exam_links[EmployeeRole::where('name', 'UI/UX Designer')->first()->id]='UI/UX Designer url of exam';
+    $exam_links[EmployeeRole::where('name', 'other')->first()->id]='other';
 
     if($resume->job_search=='Ready to interview')
         $exam_link=$exam_links[$current_role_id];
     else
         $exam_link='';
+
+    foreach ($certifications as $certification){
+        if($certification->credential_url) {
+            $certification->credential_url = str_replace('https://', '', $certification->credential_url);
+            $certification->credential_url = str_replace('http://', '', $certification->credential_url);
+            $certification->credential_url = '//' . $certification->credential_url;
+        }
+    }
 
   return response()->json([
     'user'            => \App\User::find($user->id),

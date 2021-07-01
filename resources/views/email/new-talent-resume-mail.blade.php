@@ -1,5 +1,5 @@
 @component('mail::message')
-# New resume submitted on ibtikar hiring portal
+# New resume submitted on Ibtikar hiring portal
 
 <table style="margin-bottom: 40px;">
   <tbody>
@@ -62,5 +62,5 @@
 </table>
 
 Thanks,<br>
-ibtikar
+Ibtikar
 @endcomponent

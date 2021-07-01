@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="25617048-78cb-45d6-93f8-04441426db69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/PreviewCandidateResumeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/PreviewCandidateResumeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/employee/CandidateCertificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/employee/CandidateCertificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/employee/InviteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/employee/InviteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/employee/CandidateSpecialistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/employee/CandidateSpecialistController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/employee/PreviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/employee/PreviewController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/resume/preview/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/resume/preview/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/email/new-talent-resume-mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/email/new-talent-resume-mail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +156,11 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\htdocs\ibtkar\resources\views\admin\resume\preview" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -169,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624791866615</updated>
-      <workItem from="1624791868100" duration="26646000" />
+      <workItem from="1624791868100" duration="44867000" />
     </task>
     <servers />
   </component>

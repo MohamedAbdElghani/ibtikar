@@ -166,6 +166,9 @@ class CandidateSpecialistController extends Controller
     $resume                     = auth()->user()->CandidateResume;
     $speciality                 = $resume->CandidateSpecialist()->where('current_role', true)->first();
     $speciality_title           = EmployeeRole::find($speciality->speciality)->name;
+    if($speciality_title == 'Other'){
+        $speciality_title=$resume->other_role;
+    }
     $selected_experience_id     = $speciality->how_long;
     return response()->json([
       'experiences' => $experiences,
@@ -174,7 +177,7 @@ class CandidateSpecialistController extends Controller
     ], 200);
   }
 
-  
+
   // store function
 	public function apiPrimaryRoleExperienceStore(){
 		$data = request()->validate([

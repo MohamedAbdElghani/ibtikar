@@ -31,7 +31,7 @@ class LoginController extends Controller
     // protected $redirectTo = ('/employee');
 
   protected function authenticated(Request $request, $user){
-    if ( $user->role == 'employee' ) { 
+    if ( $user->role == 'employee' ) {
       if($user->CandidateResume && $user->CandidateResume->cv_file){
         return redirect()->route('employee_resume.build.previewResume');
       }else{
@@ -67,7 +67,7 @@ class LoginController extends Controller
       $token = auth()->user()->createToken('TutsForWeb')->accessToken;
       return response()->json(['token' => $token], 200);
     } else {
-      return response()->json(['error' => __('validation.email_or_password_error')], 401);
+      return response()->json(['error' => __('The email address or password you entered is invalid')], 401);
     }
   }
 }

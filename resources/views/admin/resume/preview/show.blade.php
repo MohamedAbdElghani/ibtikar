@@ -171,7 +171,11 @@
                       <span class="expiration_date">@if($certificate->expiration_month) - Expired {{$certificate->expiration_month.' '.$certificate->expiration_year}}@else - Not Expired @endif</span></p>
                     <p class="hintText mb-0"> <span class="h5">Credential ID : </span> <span class="credential_id">{{$certificate->credential_id}}</span></p>
 {{--                    <a class="hintText credential_url" href="{{$certificate->credential_url}}" target="_blank"> See Credential </a>--}}
-                    <p class="hintText credential_url" target="_blank"> {{$certificate->credential_url}} </p>
+                      @php
+                        $link=str_replace('https://', '', $certificate->credential_url);
+                        $link=str_replace('http://', '', $link);
+                      @endphp
+                    <a class="hintText credential_url" href="//{{$link}}" target="_blank"> See Credential </a>
                   </div>
                 </li>
               @endforeach
